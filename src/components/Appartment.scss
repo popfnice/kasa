@@ -1,0 +1,24 @@
+@use "../scss/variable.scss" as *;
+
+.appartment{
+    background-color: $app-background;
+    border-radius: 2rem;
+    display: flex;
+    min-height: 50vh;
+    gap: 2rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    transition: justify-content 0.5s ease-in-out
+}
+.appartment a{
+    text-decoration: none;
+    color: #ff6060
+}
+
+@media screen and (max-width: 1020px) {
+    .appartment{
+        flex-direction:column ;
+        background-color: $app-background-white;
+    }
+}

@@ -1,0 +1,16 @@
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background-color: #000000;
+  color: white;
+  margin-top: 3rem;
+  margin-bottom: 10px;
+}
+footer h4 {
+  font-weight: 500;
+  font-size: 24px;
+  margin-bottom: 0;
+}/*# sourceMappingURL=Footer.css.map */
