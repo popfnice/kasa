@@ -1,13 +1,13 @@
 import React from 'react';
 import './about.scss';
-import Banner from '../components/Banner';
+import BannerWithoutH1 from '../components/BannerWithoutH1.jsx';
 import Collapse from '../components/Collapse';
-import aboutImage from '../assets/about_pic.jpg';
+
 
 function About() {
   return (
     <div className='about-description'>
-      <Banner image={aboutImage} />
+      <BannerWithoutH1 />
       <div className="aboutCollapse">
         <Collapse 
           title="Fiabilité"
