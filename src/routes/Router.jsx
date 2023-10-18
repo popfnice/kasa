@@ -2,10 +2,10 @@ import React from 'react';
 import { Outlet, createBrowserRouter } from "react-router-dom";
 import Footer from "../layout/Footer.jsx";
 import Navbar from "../layout/NavBar.jsx";
-import Appartementpage from "../pages/Appartementpage.jsx";
-import Homepage from '../pages/Homepage.jsx';
-import Error from '../pages/Error.jsx';
-import About from '../pages/About.jsx';
+import Appartementpage from '../pages/codepage/Appartementpage.jsx';
+import Homepage from '../pages/codepage/Homepage.jsx';
+import Error from '../pages/codepage/Error.jsx';
+import About from '../pages/codepage/About.jsx';
 
 const HeaderFooterLayout = () => {
     return (

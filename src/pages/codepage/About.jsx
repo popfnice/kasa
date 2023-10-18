@@ -1,8 +1,8 @@
 // about.jsx
 import React, { useState } from 'react';
-import './about.scss';
-import BannerWithoutH1 from '../components/BannerWithoutH1.jsx';
-import Collapse from '../components/Collapse';
+import '../style/about.scss';
+import BannerWithoutH1 from '../../components/BannerWithoutH1';
+import Collapse from '../../components/Collapse';
 
 function About() {
     const [isOpenFiabilite, setIsOpenFiabilite] = useState(false);

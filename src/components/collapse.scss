@@ -82,7 +82,7 @@
         transform: translateY(-50%) rotate(-180deg); /* Transformation initiale */
     }
     &.open .collapse-icon {
-        transform: translateY(-50%) rotate(180deg); /* Transformation finale */
+        transform: translateY(-50%) rotate(0deg); /* Transformation finale */
     }
 
 

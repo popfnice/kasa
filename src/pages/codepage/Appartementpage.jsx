@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import "../pages/appartementpage.scss";
-import AppartementDescription from '../components/AppartementDescription';
-import AppartementBanner from '../components/AppartementBanner';
-import AppartementHeader from '../components/AppartementHeader';
-import starColor from "../assets/star_color.png"
-import starGrey from "../assets/star_grey.png"
+import "../style/appartementpage.scss";
+import AppartementDescription from '../../components/AppartementDescription';
+import AppartementBanner from '../../components/AppartementBanner';
+import AppartementHeader from '../../components/AppartementHeader';
 import { useLocation } from 'react-router-dom';
 
 function AppartementPage() {

@@ -1,14 +1,14 @@
-
-import React, { useRef } from 'react'
+import React, { useRef, useState, useEffect } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './AppartementBanner.scss';
-import arrowLeftImage from '../assets/arrow_left.png'; // Remplacez le chemin par le bon chemin de votre image
-import arrowRightImage from '../assets/arrow_right.png'; // Remplacez le chemin par le bon chemin de votre image
+import arrowLeftImage from '../assets/arrow_left.png';
+import arrowRightImage from '../assets/arrow_right.png';
 
 function AppartementBanner(props) {
   const sliderRef = useRef(null);
+  const [currentSlide, setCurrentSlide] = useState(0);
 
   const settings = {
     dots: false,
@@ -16,6 +16,9 @@ function AppartementBanner(props) {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    beforeChange: (current, next) => {
+      setCurrentSlide(next);
+    },
   };
 
   const goToNextSlide = () => {
@@ -30,6 +33,10 @@ function AppartementBanner(props) {
     }
   };
 
+  useEffect(() => {
+    setCurrentSlide(0);
+  }, [props.pictures]);
+
   return (
     <div className='appartement-img'>
       <Slider {...settings} ref={sliderRef}>
@@ -39,6 +46,9 @@ function AppartementBanner(props) {
           </div>
         ))}
       </Slider>
+      <div className="slide-counter">
+        {currentSlide + 1}/{props.pictures.length}
+      </div>
       <button className="slider-arrow slider-arrow-left" onClick={goToPrevSlide}>
         <img src={arrowLeftImage} alt="Previous" />
       </button>
